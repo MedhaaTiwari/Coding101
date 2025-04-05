@@ -133,6 +133,8 @@
             object-fit: cover; /* Ensure the image fills the circle */
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
 </head>
 <script>
   function showSection(id) {
@@ -148,33 +150,26 @@
 </script>
 
 <body>
+   
+      
     <header>
-        <!-- Background video -->
-        <video autoplay muted loop playsinline id="bg-video">
-          <source src="your-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      
-        <!-- Content on top of the video -->
-        <div class="header-content">
-          <div style="display: flex; align-items: center; justify-content: center;">
-            <!-- Removed image here -->
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="your_profile_picture.png" alt="Profile Picture" style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px; object-fit: cover;">
             <h1 class="typing-text" style="font-family: cursive; color: rgb(250,237,224);"></h1>
-          </div>
-          <p>Electronics Engineer | Embedded Systems Enthusiast | Content Creator</p>
-          <nav>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+
         </div>
-      </header>
-      
+        <p class="title-stroke-hover">Electronics Engineer | Embedded Systems Enthusiast | Content Creator</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="overlay"></div>
 
 
@@ -196,7 +191,31 @@
         </section>
 
         <section id="about" class="section">
-            <h2>About Me</h2>
+            <h2 class="floaty-heading">About Me</h2>
+                    <div style="font-family: 'Merriweather', serif;">
+                        <p>I am Medha Tiwari, a second-year Electronics and Communication Engineering student at MIT World Peace University, with an insatiable passion for embedded systems, microcontroller programming, and the seamless fusion of hardware and software. My fascination with technology is driven by a vision to bridge the gap between electronics and intelligent automation, crafting solutions that enhance efficiency, connectivity, and real-world functionality.</p>
+        
+                        <h3>Technical Prowess & Expertise</h3>
+                        <p>I possess a strong foundation in:</p>
+                        <ul>
+                            <li>✔ Embedded Systems Development(Arduino, STM32, MATLAB)</li>
+                            <li>✔ Microcontroller Programming(C, C++, Python)</li>
+                            <li>✔ Sensor Integration & IoT Architectures</li>
+                            <li>✔ Real-Time Data Processing & Circuit Optimization</li>
+                            <li>✔ AI-Driven Automation & Smart Technologies</li>
+                        </ul>
+                <div style="font-family: 'Merriweather', serif;">
+                    <p>I am Medha Tiwari, a second-year Electronics and Communication Engineering student at MIT World Peace University, with an insatiable passion for embedded systems, microcontroller programming, and the seamless fusion of hardware and software. My fascination with technology is driven by a vision to bridge the gap between electronics and intelligent automation, crafting solutions that enhance efficiency, connectivity, and real-world functionality.</p>
+    
+                    <h3>Technical Prowess & Expertise</h3>
+                    <p>I possess a strong foundation in:</p>
+                    <ul>
+                        <li>✔ Embedded Systems Development(Arduino, STM32, MATLAB)</li>
+                        <li>✔ Microcontroller Programming(C, C++, Python)</li>
+                        <li>✔ Sensor Integration & IoT Architectures</li>
+                        <li>✔ Real-Time Data Processing & Circuit Optimization</li>
+                        <li>✔ AI-Driven Automation & Smart Technologies</li>
+                    </ul>
             <div style="font-family: 'Merriweather', serif;">
                 <p>I am Medha Tiwari, a second-year Electronics and Communication Engineering student at MIT World Peace University, with an insatiable passion for embedded systems, microcontroller programming, and the seamless fusion of hardware and software. My fascination with technology is driven by a vision to bridge the gap between electronics and intelligent automation, crafting solutions that enhance efficiency, connectivity, and real-world functionality.</p>
 
@@ -237,7 +256,7 @@
             </div>
         </section>
         <section id="skills" class="section">
-            <h2>Skills & Certifications</h2>
+            <h2 class="floaty-heading">Skills & Certifications</h2>
             <hr>
             <h3>Programming & Development:</h3>
             <ul>
@@ -287,7 +306,7 @@
         </section>
 
         <section id="experience" class="section">
-            <h2>Experience</h2>
+            <h2 class="floaty-heading">Experience</h2>
             <div>
                 <h3>Team Bolt (Content Head)</h3>
                 <ul>
@@ -365,7 +384,7 @@
         </section>
 
         <section id="projects" class="section">
-            <h2>Projects</h2>
+            <h2 class="floaty-heading">Projects</h2>
             <div class="project-item">
                 <div style="display: flex; align-items: center;">
                     <img src="solar_tracker_image.jpg" alt="Single-Axis Solar Tracker" style="width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
@@ -406,7 +425,7 @@
         </section>
 
         <section id="contact" class="section">
-            <h2>Contact</h2>
+            <h2 class="floaty-heading">Contact</h2>
             <div class="contact-section">
                 <p>Let's connect! Whether you have a project idea, a collaboration opportunity, or just want to chat about embedded systems and content creation, feel free to reach out!</p>
             </div>
@@ -470,7 +489,7 @@
                         <img src="linkedin.png" alt="LinkedIn Logo" style="width: 50px; height: auto;">
                     </a>
                     <a href="https://www.instagram.com/medha_tiwari_?igsh=Y3Y2MWx0bzNya3Z1" target="_blank">
-                        <img src="instagram.jpeg" alt="Instagram Logo" style="width: 50px; height: auto;">
+                        <img src="instagram.png" alt="Instagram Logo" style="width: 50px; height: auto;">
                     </a>
                 </div>
             </div>
@@ -488,20 +507,20 @@
         });
       </script>
       <script>
-        const coffeeCursor = document.createElement("div");
-        coffeeCursor.textContent = "☕";
-        coffeeCursor.style.position = "fixed";
-        coffeeCursor.style.pointerEvents = "none";
-        coffeeCursor.style.zIndex = "10000";
-        coffeeCursor.style.fontSize = "24px";
-        document.body.appendChild(coffeeCursor);
-      
-        document.addEventListener("mousemove", (e) => {
-          coffeeCursor.style.left = e.pageX + "px";
-          coffeeCursor.style.top = e.pageY + "px";
-        });
-      </script>
-      
-      
+  const coffeeCursor = document.createElement("div");
+  coffeeCursor.textContent = "☕";
+  coffeeCursor.style.position = "fixed";
+  coffeeCursor.style.pointerEvents = "none";
+  coffeeCursor.style.zIndex = "10000";
+  coffeeCursor.style.fontSize = "24px";
+  document.body.appendChild(coffeeCursor);
+
+  document.addEventListener("mousemove", (e) => {
+    coffeeCursor.style.left = e.pageX + "px";
+    coffeeCursor.style.top = e.pageY + "px";
+  });
+</script>
+
+       
 </body>
 </html>
