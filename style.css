@@ -181,41 +181,52 @@
     font-size: 2.5em;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid rgb(250,237,224);
+    border-right: 3px solid rgb(250, 237, 224);
     width: 0;
-    animation: typing 2.5s steps(13, end) forwards, blink 0.75s step-end infinite;
+    animation: typingCycle 8s steps(13, end) infinite;
   }
   
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 13ch } /* "Medha Tiwari" is 13 characters including space */
+  @keyframes typingCycle {
+    0% {
+      width: 0;
+    }
+    30% {
+      width: 13ch; /* full name typed */
+    }
+    50% {
+      width: 13ch; /* pause after typing */
+    }
+    80% {
+      width: 0; /* erased */
+    }
+    100% {
+      width: 0; /* pause before next cycle */
+    }
   }
   
-  @keyframes blink {
-    50% { border-color: transparent }
-  }
-  body { cursor: none; }
-  header {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+  .title-stroke-hover {
     color: white;
-    text-align: center;
-  }
-  
-  #bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  
-  .header-content {
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
     position: relative;
-    z-index: 1;
-    padding-top: 20vh;
   }
   
+  .title-stroke-hover:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+  }
+  @keyframes floaty {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .floaty-heading {
+    display: inline-block;
+    animation: floaty 3s ease-in-out infinite;
+    color: #FFFAFA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body { cursor: none; }
+    
