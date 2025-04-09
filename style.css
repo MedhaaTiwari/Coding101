@@ -7,11 +7,11 @@
     --text-color-dark: #d9b690;
     --text-color-light: #d1d1d1;
     --glass-bg: rgba(31, 31, 31, 0.7); /* Transparent grey */
-  }
-  
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-  
-  body {
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -21,12 +21,12 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-   
+    backdrop-filter: blur(5px);
     cursor: url('coffee-cup.png'), auto; /* Replace with your image path */
 }
 
-  
-  header {
+
+header {
     background-image: url('top-banner.jpg'); /* replace with your image file path */
     background-size: cover;
     background-position: center;
@@ -36,20 +36,23 @@
     text-align: center;
     position: relative;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     padding: 0;
     margin: 1em 0;
     text-align: center;
-  }
-  
-  nav ul li {
-    display: block;
-  }
-  
-  nav ul li a {
+    display: flex; /* Add this to make the list items horizontal */
+    justify-content: center; /* Optional: Center the buttons horizontally */
+    gap: 10px; /* Optional: Add some spacing between the buttons */
+}
+
+nav ul li {
+    display: inline; /* Change from block to inline */
+}
+
+nav ul li a {
     display: inline-block;
     padding: 10px 22px;
     text-decoration: none;
@@ -58,15 +61,16 @@
     border-radius: 30px;
     transition: all 0.3s ease;
     font-weight: 600;
-  }
-  
-  nav ul li a:hover {
+    margin: 0; /* Remove any default margin that might affect layout */
+}
+
+nav ul li a:hover {
     background-color: var(--accent-color-2);
     color: #d9b690;
     box-shadow: 0 0 10px var(--accent-color-2);
-  }
-  
-  main.container {
+}
+
+main.container {
     max-width: 960px;
     margin: 40px auto;
     padding: 40px;
@@ -74,49 +78,49 @@
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     flex-grow: 1;
-  }
-  
-  h2, h3, h4 {
+}
+
+h2, h3, h4 {
     color: var(--accent-color-1);
     border-bottom: 2px solid var(--accent-color-2);
     padding-bottom: 6px;
-  }
-  
-  ul {
+}
+
+ul {
     list-style-type: square;
     padding-left: 25px;
-  }
-  
-  li {
+}
+
+li {
     margin-bottom: 10px;
-  }
-  
-  .project-item {
+}
+
+.project-item {
     background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid #63432c;
     padding: 20px;
     margin-bottom: 25px;
     border-radius: 10px;
     transition: all 0.3s ease;
-  }
-  
-  .project-item:hover {
+}
+
+.project-item:hover {
     border-color: var(--accent-color-1);
     box-shadow: 0 0 10px var(--accent-color-1);
-  }
-  
-  footer {
+}
+
+footer {
     background-color: var(--glass-bg);
     color: var(--text-color-light);
     text-align: center;
     padding: 1.5em 0;
     margin-top: auto;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
-  }
-  
-  /* Contact / Buttons */
-  .cta-buttons button,
-  #contact-form button {
+}
+
+/* Contact / Buttons */
+.cta-buttons button,
+#contact-form button {
     background-color: var(--accent-color-1);
     color: var(--text-color-dark);
     border: none;
@@ -126,17 +130,17 @@
     font-size: 1em;
     transition: all 0.3s ease;
     cursor: pointer;
-  }
-  
-  .cta-buttons button:hover,
-  #contact-form button:hover {
+}
+
+.cta-buttons button:hover,
+#contact-form button:hover {
     background-color: var(--accent-color-2);
     transform: scale(1.05);
     box-shadow: 0 0 10px var(--accent-color-2);
-  }
-  
-  #contact-form input,
-  #contact-form textarea {
+}
+
+#contact-form input,
+#contact-form textarea {
     background-color: rgba(255, 255, 255, 0.05);
     color: var(--text-color-light);
     border: 1px solid #444;
@@ -144,90 +148,90 @@
     padding: 12px;
     margin-bottom: 15px;
     width: 100%;
-  }
-  
-  #contact-form input:focus,
-  #contact-form textarea:focus {
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
     outline: none;
     border-color: var(--accent-color-1);
     box-shadow: 0 0 5px var(--accent-color-1);
-  }
-  
-  /* Social Links */
-  .social-links a,
-  .contact-social a {
+}
+
+/* Social Links */
+.social-links a,
+.contact-social a {
     color: var(--accent-color-1);
     font-size: 1.5em;
     margin-right: 15px;
     transition: all 0.3s ease;
-  }
-  
-  .social-links a:hover,
-  .contact-social a:hover {
+}
+
+.social-links a:hover,
+.contact-social a:hover {
     color: var(--accent-color-2);
     transform: translateY(-2px);
-  }
-  .overlay {
+}
+.overlay {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: -1;
-  }
-  .typing-text {
+}
+.typing-text {
     font-size: 2.5em;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid rgb(250, 237, 224);
     width: 0;
     animation: typingCycle 8s steps(13, end) infinite;
-  }
-  
-  @keyframes typingCycle {
+}
+
+@keyframes typingCycle {
     0% {
-      width: 0;
+        width: 0;
     }
     30% {
-      width: 13ch; /* full name typed */
+        width: 13ch; /* full name typed */
     }
     50% {
-      width: 13ch; /* pause after typing */
+        width: 13ch; /* pause after typing */
     }
     80% {
-      width: 0; /* erased */
+        width: 0; /* erased */
     }
     100% {
-      width: 0; /* pause before next cycle */
+        width: 0; /* pause before next cycle */
     }
-  }
-  
-  .title-stroke-hover {
+}
+
+.title-stroke-hover {
     color: white;
     font-size: 24px;
     transition: all 0.3s ease-in-out;
     position: relative;
-  }
-  
-  .title-stroke-hover:hover {
+}
+
+.title-stroke-hover:hover {
     color: transparent;
     -webkit-text-stroke: 1px white;
-  }
-  @keyframes floaty {
+}
+@keyframes floaty {
     0%   { transform: translateY(0px); }
     50%  { transform: translateY(-8px); }
     100% { transform: translateY(0px); }
-  }
-  
-  .floaty-heading {
+}
+
+.floaty-heading {
     display: inline-block;
     animation: floaty 3s ease-in-out infinite;
     color: #FFFAFA;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  body { cursor: none; }
-    
-  @media (max-width: 768px) {
+}
+
+body { cursor: none; }
+
+@media (max-width: 768px) {
     .container {
         width: 95%;
         padding: 15px;
@@ -238,20 +242,20 @@
     }
 
     nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 0;
-      margin: 1em 0;
-      list-style: none;
-      text-align: center;
+        display: flex; /* Make them horizontal */
+        flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+        justify-content: center; /* Center the items */
+        gap: 10px; /* Spacing between items */
+        padding: 0;
+        margin: 1em 0;
+        list-style: none;
+        text-align: center;
     }
-    
+
 
     nav ul li a {
         margin: 5px 0;
-        width: 90%;
+        width: auto; /* Adjust width to content */
         text-align: center;
     }
 
@@ -283,57 +287,60 @@
     }
 }
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 @media (max-width: 768px) {
-  header {
-    padding: 2em 1em;
-  }
+    header {
+        padding: 2em 1em;
+    }
 
-  .typing-text {
-    font-size: 1.5em;
-  }
+    .typing-text {
+        font-size: 1.5em;
+    }
 
-  main.container {
-    padding: 20px;
-    margin: 20px;
-  }
+    main.container {
+        padding: 20px;
+        margin: 20px;
+    }
 
-  nav ul {
-    flex-direction: column;
-    gap: 8px;
-  }
+    nav ul {
+        flex-direction: row; /* Keep horizontal on smaller screens too */
+        justify-content: center; /* Center items */
+        gap: 8px; /* Adjust spacing */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
 
-  nav ul li a {
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-  }
+    nav ul li a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        width: auto; /* Adjust width */
+        text-align: center;
+        margin: 0; /* Reset individual item margins */
+    }
 
-  .cta-buttons button,
-  #contact-form button {
-    width: 100%;
-    padding: 14px;
-  }
+    .cta-buttons button,
+    #contact-form button {
+        width: 100%;
+        padding: 14px;
+    }
 
-  #contact-form input,
-  #contact-form textarea {
-    font-size: 1em;
-  }
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 1em;
+    }
 }
 @media (max-width: 480px) {
-  .typing-text {
-    font-size: 1.2em;
-  }
+    .typing-text {
+        font-size: 1.2em;
+    }
 
-  h2, h3, h4 {
-    font-size: 1.1em;
-  }
+    h2, h3, h4 {
+        font-size: 1.1em;
+    }
 
-  .project-item {
-    padding: 15px;
-  }
+    .project-item {
+        padding: 15px;
+    }
 }
