@@ -38,3 +38,46 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for hash changes (e.g., if user uses back/forward buttons)
     window.addEventListener('hashchange', loadSectionFromHash);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+    const readLessButtons = document.querySelectorAll('.read-less-btn');
+    const aboutDetails = document.querySelectorAll('.about-details');
+  
+    readMoreButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const targetId = this.dataset.target;
+        const detailsElement = document.getElementById(targetId);
+        if (detailsElement) {
+          detailsElement.style.display = 'block';
+          this.style.display = 'none'; // Hide the "Read More" button
+          const readLessButton = detailsElement.querySelector('.read-less-btn[data-target="' + targetId + '"]');
+          if (readLessButton) {
+            readLessButton.style.display = 'block';
+          }
+        }
+      });
+    });
+  
+    readLessButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const targetId = this.dataset.target;
+        const detailsElement = document.getElementById(targetId);
+        if (detailsElement) {
+          detailsElement.style.display = 'none';
+          this.style.display = 'none'; // Hide the "Read Less" button
+          const readMoreButton = document.querySelector('.read-more-btn[data-target="' + targetId + '"]');
+          if (readMoreButton) {
+            readMoreButton.style.display = 'block';
+          }
+        }
+      });
+    });
+  
+    // Initially hide all "Read Less" buttons
+    readLessButtons.forEach(button => {
+      button.style.display = 'none';
+    });
+  });
+  
+    
