@@ -1,528 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medha Tiwari - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=.0">
+<title>Medha Tiwari - Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        /* Basic inline styles for content layout */
-        .container {
-            max-width: 960px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #FFFFFF; /* White background for content */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .section {
-            display: none; /* Initially hide all sections */
-            padding-bottom: 30px;
-            border-bottom: 1px solid #63432c; /* Blue Munsell */
-        }
-        .section:last-child {
-            border-bottom: none;
-        }
-        h2, h3, h4 {
-            color: #63432c; /* Midnight green */
-            border-bottom: 2px solid #63432c; /* Mint */
-            padding-bottom: 5px;
-            margin-top: 20px;
-        }
-        h4 {
-            border-bottom: none;
-            margin-top: 10px;
-        }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .project-item {
-            margin-bottom: 20px;
-            border: 1px solid #d9b690; /* Blue Munsell */
-            padding: 15px;
-            border-radius: 5px;
-        }
-        .project-item h4 {
-            color: #d9b690; /* Mint */
-            margin-top: 0;
-        }
-        .contact-info p {
-            margin-bottom: 10px;
-        }
-        .social-links a {
-            display: inline-block;
-            margin-right: 10px;
-            color: #63432c; /* Midnight green */
-            font-size: 1.2em;
-        }
-        /* Style the navigation links to look more like buttons */
-        nav ul li a {
-            display: inline-block;
-            padding: 8px 15px;
-            margin-right: 10px;
-            text-decoration: none;
-            color: #d9b690; /* Prussian blue text */
-            background-color: #0d0d0d; /* White background */
-            border-radius: 20px; /* Make them oval */
-            border: 1px solid #FFFFFF; /* Optional: Add a white border for definition */
-        }
+<style>
+/* Basic inline styles for content layout */
+.container {
+max-width: 960px;
+margin: 20px auto;
+padding: 20px;
+background-color: #f19696; /* White background for content */
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(243, 128, 128, 0.919);
+}
+.section {
+display: none; /* Initially hide all sections */
+padding-bottom: 30px;
+border-bottom: 1px solid #f4ebeb; /* Blue Munsell */
+}
+.section:last-child {
+border-bottom: none;
+}
+h2, h3, h4 {
+color: #f4f2f0; /* Midnight green */
+border-bottom: 2px solid #ede5e2; /* Mint */
+padding-bottom: 5px;
+margin-top: 20px;
+}
+h4 {
+border-bottom: none;
+margin-top: 10px;
+}
+ul {
+list-style-type: square;
+padding-left: 20px;
+}
+li {
+margin-bottom: 5px;
+}
+.project-item {
+margin-bottom: 20px;
+border: 1px solid #f6f4f2; /* Blue Munsell */
+padding: 15px;
+border-radius: 5px;
+}
+.project-item h4 {
+color: #f1ece8; /* Mint */
+margin-top: 0;
+}
+.contact-info p {
+margin-bottom: 10px;
+}
+.social-links a {
+display: inline-block;
+margin-right: 10px;
+color: #060605; /* Midnight green */
+font-size: 1.2em;
+}
+/* Style the navigation links to look more like buttons */
+nav ul li a {
+display: inline-block;
+padding: 8px 15px;
+margin-right: 10px;
+text-decoration: none;
+color: #e7ded5; /* Prussian blue text */
+background-color:#f08585; /* White background */
+border-radius: 20px; /* Make them oval */
+border: 1px solid #FFFFFF; /* Optional: Add a white border for definition */
+}
 
-        nav ul li a:hover {
-            background-color: #E0E0E0; /* Light gray on hover */
-            border-color: #E0E0E0;
-        }
+nav ul li a:hover {
+background-color: #E0E0E0; /* Light gray on hover */
+border-color: #E0E0E0;
+}
 
-        /* Home Page Specific Styles */
-        #home p.intro {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .cta-buttons button {
-            padding: 10px 20px;
-            margin-right: 15px;
-            background-color: #63432c; /* Mint */
-            color: #0d0d0d; /* Prussian blue */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .cta-buttons button:hover {
-            background-color: #d9b690; /* Blue Munsell */
-        }
-        .skills-highlight {
-            margin-top: 30px;
-        }
-        .skills-highlight div { /* Changed from span to div for line breaks */
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        .tagline {
-            font-style: italic;
-            color: #d9b690; /* Midnight green */
-            margin-top: 30px;
-        }
+/* Home Page Specific Styles */
+#home p.intro {
+font-size: 1.2em;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+.cta-buttons button {
+padding: 10px 20px;
+margin-right: 15px;
+background-color: #f0e9e9; /* Mint */
+color: #090808; /* Prussian blue */
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1em;
+}
+.cta-buttons button:hover {
+background-color: #14110d; /* Blue Munsell */
+}
+.skills-highlight {
+margin-top: 30px;
+}
+.skills-highlight div { /* Changed from span to div for line breaks */
+margin-bottom: 10px;
+font-size: 1.1em;
+}
+.tagline {
+font-style: italic;
+color: #cfcac6; /* Midnight green */
+margin-top: 30px;
+}
 
-        footer {
-            background-color: #172A3A; /* Prussian blue */
-            color: #d9b690; /* Tiffany Blue */
-            text-align: center;
-            padding: 1em 0;
-            margin-top: auto; /* Push the footer to the bottom */
-            width: 100%;
-        }
+footer {
+background-color: #737374; /* Prussian blue */
+color: #e1d0bf; /* Tiffany Blue */
+text-align: center;
+padding: 1em 0;
+margin-top: auto; /* Push the footer to the bottom */
+width: 100%;
+}
 
-        /* About Me Page Image Styles */
-        .about-images-container {
-            display: flex;
-            justify-content: space-around; /* Distribute space evenly around images */
-            align-items: center; /* Vertically align images in the middle */
-            margin-top: 20px; /* Add some space above the images */
-            margin-bottom: 20px; /* Add some space below the images */
-        }
+/* About Me Page Image Styles */
+.about-images-container {
+display: flex;
+justify-content: space-around; /* Distribute space evenly around images */
+align-items: center; /* Vertically align images in the middle */
+margin-top: 20px; /* Add some space above the images */
+margin-bottom: 20px; /* Add some space below the images */
+}
 
-        .about-image {
-            width: 150px; /* Increased size */
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover; /* Ensure the image fills the circle */
-        }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-
+.about-image {
+width: 150px; /* Increased size */
+height: 150px;
+border-radius: 50%;
+object-fit: cover; /* Ensure the image fills the circle */
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Retro+Vibes&display=swap" rel="stylesheet">
 </head>
 <script>
-  function showSection(id) {
-    const sections = document.querySelectorAll(".section");
-    sections.forEach(section => {
-      section.style.display = "none";
-    });
-    const selected = document.getElementById(id);
-    if (selected) {
-      selected.style.display = "block";
-    }
-  }
+function showSection(id) {
+const sections = document.querySelectorAll(".section");
+sections.forEach(section => {
+section.style.display = "none";
+});
+const selected = document.getElementById(id);
+if (selected) {
+selected.style.display = "block";
+}
+}
 </script>
 
 <body>
-   
-      
-    <header>
-        <div style="display: flex; align-items: center; justify-content: center;">
-            <img src="your_profile_picture.png" alt="Profile Picture" style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px; object-fit: cover;">
-            <h1 class="typing-text" style="font-family: cursive; color: rgb(250,237,224);"></h1>
+<header>
+<div style="display: flex; align-items: center; justify-content: center;">
+<img src="your_profile_picture.png" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px; object-fit: cover;">
+<h1 class="typing-text" style="font-family: cursive; color: rgb(237, 238, 241);"></h1>
 
-        </div>
-        <p class="title-stroke-hover">Electronics Engineer | Embedded Systems Enthusiast | Content Creator</p>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="overlay"></div>
+</div>
+<p style="text-align: center;" class="title-shadow"><b>Electronics Engineer | Embedded Systems Enthusiast | Content Creator</b></p>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+</nav>
+</header>
+<div class="overlay"></div>
 
 
-    <main class="container">
-        <section id="home" class="section">
-            <h2>Welcome</h2>
-            <p class="intro">Hi, I'm Medha Tiwari – an Electronics Engineering student with a keen interest in Embedded Systems, IoT, and Content Creation. I build and write about technology that makes a difference.</p>
-            <div class="cta-buttons">
-                <a href="#about"><button>Learn About Me</button></a>
-                <a href="#contact"><button>Let's Connect</button></a>
-            </div>
-            <div class="skills-highlight">
-                <h3>Skills Highlight</h3>
-                <div>💻 Programming: Python, C, C++</div>
-                <div>⚡ Embedded Systems: Arduino, IoT, Sensors</div>
-                <div>📝 Content Creation: SEO, Technical Writing</div>
-            </div>
-            <p class="tagline">Blending Hardware & Software to Build Smarter Solutions.</p>
-        </section>
+<main class="container">
+<section id="home" class="section">
+<h2>Welcome</h2>
+<p class="intro">Hi, I'm Medha Tiwari – an Electronics Engineering student with a keen interest in Embedded Systems, IoT, and Content Creation. I build and write about technology that makes a difference.</p>
+<div class="cta-buttons">
+<a href="#about"><button>Learn About Me</button></a>
+<a href="#contact"><button>Let's Connect</button></a>
+</div>
+<div class="skills-highlight">
+<h3>Skills Highlight</h3>
+<div>💻 Programming: Python, C, C++</div>
+<div>⚡ Embedded Systems: Arduino, IoT, Sensors</div>
+<div>📝 Content Creation: SEO, Technical Writing</div>
+</div>
+<p class="tagline">Blending Hardware & Software to Build Smarter Solutions.</p>
+</section>
 
-        <section id="about" class="section">
-            <h2 class="floaty-heading">About Me</h2>
-                    <div style="font-family: 'Merriweather', serif;">
-                        <p>I am Medha Tiwari, a second-year Electronics and Communication Engineering student at MIT World Peace University, with an insatiable passion for embedded systems, microcontroller programming, and the seamless fusion of hardware and software. My fascination with technology is driven by a vision to bridge the gap between electronics and intelligent automation, crafting solutions that enhance efficiency, connectivity, and real-world functionality.</p>
+<section id="about" class="section">
+    <h2 class="floaty-heading">About Me</h2>
+    <div style="font-family: 'Merriweather', serif;">
+  
+      <!-- Grouped Buttons in One Line -->
+      <div class="about-button-group">
+        <button class="read-more-btn" data-target="technical-details">My Technical Expertise</button>
+        <button class="read-more-btn" data-target="digital-strategy">Digital Strategy Work</button>
+        <button class="read-more-btn" data-target="vision-aspirations">My Vision & Aspirations</button>
+      </div>
+  
+      <!-- TECHNICAL DETAILS -->
+      <div id="technical-details" class="about-details hidden">
+        <h3>Technical Prowess & Expertise</h3>
+        <p>I possess a strong foundation in:</p>
+        <ul>
+          <li>✔ Embedded Systems Development (Arduino, STM32, MATLAB)</li>
+          <li>✔ Microcontroller Programming (C, C++, Python)</li>
+          <li>✔ Sensor Integration & IoT Architectures</li>
+          <li>✔ Real-Time Data Processing & Circuit Optimization</li>
+          <li>✔ AI-Driven Automation & Smart Technologies</li>
+        </ul>
+        <p>My work revolves around sensor-driven automation, real-time data analytics, and circuit design, culminating in solutions that maximize performance and efficiency. I am particularly intrigued by the synergy between AI and embedded systems, where intelligence meets real-time decision-making.</p>
+        <button class="read-less-btn" data-target="technical-details">Read Less</button>
+      </div>
+  
+      <!-- DIGITAL STRATEGY -->
+      <div id="digital-strategy" class="about-details hidden">
+        <h3>Beyond Engineering: The Art of Digital Strategy</h3>
+        <p>Beyond my technical endeavours, I thrive as a content creator and digital strategist, spearheading initiatives in:</p>
+        <ul>
+          <li>- Team Bolt, Young Minds Organisation, and the Society of Women Engineers</li>
+          <li>- SEO-driven content architecture, website curation, and UX refinement</li>
+        </ul>
+        <p>With a deep appreciation for the power of words, I specialize in translating complex technological concepts into compelling narratives, ensuring they captivate and resonate with diverse audiences.</p>
+        <button class="read-less-btn" data-target="digital-strategy">Read Less</button>
+      </div>
+  
+      <!-- VISION & ASPIRATIONS -->
+      <div id="vision-aspirations" class="about-details hidden">
+        <h3>Vision & Aspirations</h3>
+        <p>As I navigate my journey in engineering, I aspire to:</p>
+        <ul>
+          <li>🚀 Pioneer groundbreaking embedded solutions that harmoniously integrate hardware, software, and AI.</li>
+          <li>🌎 Revolutionise IoT & smart systems, pushing the frontiers of automation and intelligent design.</li>
+          <li>📖 Champion continuous learning and interdisciplinary problem-solving, fostering impactful innovation in the ever-evolving technological landscape.</li>
+        </ul>
+        <button class="read-less-btn" data-target="vision-aspirations">Read Less</button>
+      </div>
+  
+    </div>
+  
+    <!-- IMAGES -->
+    <div class="about-images-container">
+      <img src="1.jpeg" alt="Image 1" class="about-image">
+      <img src="2.jpeg" alt="Image 2" class="about-image">
+      <img src="3.jpeg" alt="Image 3" class="about-image">
+      <img src="4.jpeg" alt="Image 4" class="about-image">
+    </div>
+  </section>
+  
+  <section id="skills" class="section">
+    <h2 class="floaty-heading">Skills & Certifications</h2>
+    <div style="font-family: 'Merriweather', serif;">
+      <!-- Grouped Buttons in One Line -->
+      <div class="skills-button-group">
+        <button class="read-more-btn" data-target="programming-dev">Programming & Development</button>
+        <button class="read-more-btn" data-target="embedded-systems">Embedded Systems & Hardware</button>
+      </div>
+      <div class="skills-button-group">
+        <button class="read-more-btn" data-target="data-science">Data Science & Analysis</button>
+        <button class="read-more-btn" data-target="digital-content">Content & Digital Marketing</button>
+      </div>
+      <div class="skills-button-group">
+        <button class="read-more-btn" data-target="tools-platforms">Tools & Platforms</button>
+        <button class="read-more-btn" data-target="certifications">Certifications & Training</button>
+        <button class="read-more-btn" data-target="notable-projects">Notable Projects</button>
+      </div>
+      <div class="about-segment">
         
-                        <h3>Technical Prowess & Expertise</h3>
-                        <p>I possess a strong foundation in:</p>
-                        <ul>
-                            <li>✔ Embedded Systems Development(Arduino, STM32, MATLAB)</li>
-                            <li>✔ Microcontroller Programming(C, C++, Python)</li>
-                            <li>✔ Sensor Integration & IoT Architectures</li>
-                            <li>✔ Real-Time Data Processing & Circuit Optimization</li>
-                            <li>✔ AI-Driven Automation & Smart Technologies</li>
-                        </ul>
-                <div style="font-family: 'Merriweather', serif;">
-                    <p>I am Medha Tiwari, a second-year Electronics and Communication Engineering student at MIT World Peace University, with an insatiable passion for embedded systems, microcontroller programming, and the seamless fusion of hardware and software. My fascination with technology is driven by a vision to bridge the gap between electronics and intelligent automation, crafting solutions that enhance efficiency, connectivity, and real-world functionality.</p>
-    
-                    <h3>Technical Prowess & Expertise</h3>
-                    <p>I possess a strong foundation in:</p>
-                    <ul>
-                        <li>✔ Embedded Systems Development(Arduino, STM32, MATLAB)</li>
-                        <li>✔ Microcontroller Programming(C, C++, Python)</li>
-                        <li>✔ Sensor Integration & IoT Architectures</li>
-                        <li>✔ Real-Time Data Processing & Circuit Optimization</li>
-                        <li>✔ AI-Driven Automation & Smart Technologies</li>
-                    </ul>
-            <div style="font-family: 'Merriweather', serif;">
-                <p>I am Medha Tiwari, a second-year Electronics and Communication Engineering student at MIT World Peace University, with an insatiable passion for embedded systems, microcontroller programming, and the seamless fusion of hardware and software. My fascination with technology is driven by a vision to bridge the gap between electronics and intelligent automation, crafting solutions that enhance efficiency, connectivity, and real-world functionality.</p>
-
-                <h3>Technical Prowess & Expertise</h3>
-                <p>I possess a strong foundation in:</p>
-                <ul>
-                    <li>✔ Embedded Systems Development(Arduino, STM32, MATLAB)</li>
-                    <li>✔ Microcontroller Programming(C, C++, Python)</li>
-                    <li>✔ Sensor Integration & IoT Architectures</li>
-                    <li>✔ Real-Time Data Processing & Circuit Optimization</li>
-                    <li>✔ AI-Driven Automation & Smart Technologies</li>
-                </ul>
-
-                <p>My work revolves around sensor-driven automation, real-time data analytics, and circuit design, culminating in solutions that maximize performance and efficiency. I am particularly intrigued by the synergy between AI and embedded systems, where intelligence meets real-time decision-making.</p>
-
-                <h3>Beyond Engineering: The Art of Digital Strategy</h3>
-                <p>Beyond my technical endeavours, I thrive as a content creator and digital strategist, spearheading initiatives in:</p>
-                <ul>
-                    <li>- Team Bolt, Young Minds Organisation, and the Society of Women Engineers</li>
-                    <li>- SEO-driven content architecture, website curation, and UX refinement</li>
-                </ul>
-
-                <p>With a deep appreciation for the power of words, I specialize in translating complex technological concepts into compelling narratives, ensuring they captivate and resonate with diverse audiences.</p>
-
-                <h3>Vision & Aspirations</h3>
-                <p>As I navigate my journey in engineering, I aspire to:</p>
-                <ul>
-                    <li>🚀 Pioneer groundbreaking embedded solutions that harmoniously integrate hardware, software, and AI.</li>
-                    <li>🌎 Revolutionise IoT & smart systems, pushing the frontiers of automation and intelligent design.</li>
-                    <li>📖 Champion continuous learning and interdisciplinary problem-solving, fostering impactful innovation in the ever-evolving technological landscape.</li>
-                </ul>
-            </div>
-            <div class="about-images-container">
-                <img src="1.jpeg" alt="Image 1" class="about-image">
-                <img src="2.jpeg" alt="Image 2" class="about-image">
-                <img src="3.jpeg" alt="Image 3" class="about-image">
-                <img src="4.jpeg" alt="Image 4" class="about-image">
-            </div>
-        </section>
-        <section id="skills" class="section">
-            <h2 class="floaty-heading">Skills & Certifications</h2>
-            <hr>
-            <h3>Programming & Development:</h3>
-            <ul>
-                <li>Proficient in <strong>Python, C, C++, Java</strong> with hands-on experience in system programming.</li>
-                <li>Experience in <strong>HTML, CSS, JavaScript</strong> for web development.</li>
-                <li>Building projects in <strong>Android Studio (Java/Kotlin) for app development</strong>.</li>
-            </ul>
-            <h3>Embedded Systems & Hardware:</h3>
-            <ul>
-                <li>Experience with <strong>Arduino IDE, STM32</strong>, and <strong>Raspberry Pi</strong> for IoT and automation projects.</li>
-                <li>Working knowledge of <strong>PCB design and circuit simulation</strong>.</li>
-                <li>Skilled in <strong>sensor interfacing and microcontroller programming</strong>.</li>
-            </ul>
-            <h3>Data Science & Analysis:</h3>
-            <ul>
-                <li>Proficiency in <strong>MATLAB</strong> for signal processing and numerical computation.</li>
-                <li>Experience with <strong>data structures and algorithms</strong> for problem-solving.</li>
-            </ul>
-            <h3>Content & Digital Marketing:</h3>
-            <ul>
-                <li>Website development and management, SEO optimization, and content strategy.</li>
-                <li>Skilled in <strong>technical writing, documentation, and video content scripting</strong>.</li>
-            </ul>
-            <hr>
-            <h3>🛠 Tools & Platforms:</h3>
-            <ul>
-                <li><strong>IDEs:</strong> VS Code, PyCharm, Android Studio, Keil uVision, Arduino IDE</li>
-                <li><strong>Version Control:</strong> Git, GitHub</li>
-                <li><strong>Simulation & Design:</strong> MATLAB, LTspice, Proteus, KiCad, Figma</li>
-            </ul>
-            <hr>
-            <h3>Certifications & Training:</h3>
-            <ul>
-                <li>✅ <strong>MATLAB Onramp & Signal Processing Onramp</strong> *(MathWorks Certified)*</li>
-                <li>✅ <strong>Python 3.4.3 Training</strong> *(Programming Foundation Course)*</li>
-                <li>✅ <strong>COMPTIA Training</strong> *(Cybersecurity & Networking Basics - In Progress)*</li>
-                <li>✅ <strong>STM32 Course</strong> *(Embedded Systems Development - In Progress)*</li>
-            </ul>
-            <hr>
-            <h3>Notable Projects:</h3>
-            <ul>
-                <li>🌀 <strong>IoT-Based Smart Water Monitoring System</strong> – Developed a real-time water level monitoring system using <strong>ESP8266 and pressure sensors</strong>.</li>
-                <li>📱 <strong>Chatbot Application in Android Studio</strong> – Working on an AI-powered chatbot app with <strong>Java/Kotlin</strong> integration.</li>
-                <li>🌎 <strong>Touche Indeed – Personal Website</strong> – Running a poetry and thought-sharing platform.</li>
-            </ul>
-            <hr>
-        </section>
-
-        <section id="experience" class="section">
-            <h2 class="floaty-heading">Experience</h2>
-            <div>
-                <h3>Team Bolt (Content Head)</h3>
-                <ul>
-                    <li>Led content creation for websites and videos, ensuring clarity and engagement.</li>
-                    <li>Developed SEO-optimized content to enhance online reach and visibility.</li>
-                    <li>Collaborated with designers and developers to align content with brand identity.</li>
-                    <li>Improved storytelling techniques to create compelling digital experiences.</li>
-                </ul>
-                <h4>Skills Developed:</h4>
-                <ul>
-                    <li>✅ SEO & content optimization</li>
-                    <li>✅ Digital storytelling & branding</li>
-                    <li>✅ Cross-functional collaboration</li>
-                    <li>✅ Video scriptwriting & editing</li>
-                </ul>
-            </div>
-            <hr>
-            <div>
-                <h3>Young Minds Organisation & Society of Women Engineers (Content Head)</h3>
-                <ul>
-                    <li>Managed and curated content, ensuring quality and alignment with organizational goals.</li>
-                    <li>Worked on <strong>user experience optimization</strong>, making content more accessible and engaging.</li>
-                    <li>Designed content strategies to improve community engagement and outreach.</li>
-                </ul>
-                <h4>Skills Developed:</h4>
-                <ul>
-                    <li>✅ Content strategy & management</li>
-                    <li>✅ UX-focused content writing</li>
-                    <li>✅ Community engagement & leadership</li>
-                    <li>✅ Website content structuring</li>
-                </ul>
-            </div>
-            <hr>
-            <div>
-                <h3>Smart India Hackathon 2024 (Team Vibhava)</h3>
-                <h4>Main Problem Statement:</h4>
-                <p>Developed a dual-purpose <strong>well cap device</strong> featuring:</p>
-                <ol>
-                    <li>A tap for controlled water flow</li>
-                    <li>A pressure transducer-based sensor to measure water height above ground level</li>
-                </ol>
-                <h4>My Role:</h4>
-                <ul>
-                    <li>Worked on embedded system integration and sensor interfacing.</li>
-                    <li>Led <strong>hardware development</strong> and collaborated on <strong>sensor calibration</strong>.</li>
-                    <li>Assisted in presenting the final prototype and solution to industry experts.</li>
-                </ul>
-                <h4>Skills Developed:</h4>
-                <ul>
-                    <li>✅ Embedded systems & IoT integration</li>
-                    <li>✅ Sensor interfacing & data analysis</li>
-                    <li>✅ Problem-solving in real-world scenarios</li>
-                    <li>✅ Technical presentation & prototyping</li>
-                </ul>
-            </div>
-            <hr>
-            <div>
-                <h3>HackMITWPU’25 (Team Ctrl+Caffeine) – Team Leader</h3>
-                <h4>Challenge:</h4>
-                <p><em>Develop a system for companies to better manage and optimize mental health benefits for employees.</em></p>
-                <h4>My Role:</h4>
-                <ul>
-                    <li>Led a <strong>cross-disciplinary team</strong> to develop an innovative solution.</li>
-                    <li>Designed a <strong>mental health benefits management system</strong> for corporate well-being.</li>
-                    <li>Focused on <strong>system architecture, workflow design, and user interface optimization</strong>.</li>
-                </ul>
-                <h4>Skills Developed:</h4>
-                <ul>
-                    <li>✅ Team leadership & project management</li>
-                    <li>✅ UI/UX design & workflow structuring</li>
-                    <li>✅ Data-driven approach to well-being solutions</li>
-                    <li>✅ Rapid prototyping & MVP development</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <h2 class="floaty-heading">Projects</h2>
-            <div class="project-item">
-                <div style="display: flex; align-items: center;">
-                    <img src="solar_tracker_image.jpg" alt="Single-Axis Solar Tracker" style="width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
-                    <div>
-                        <h3>1️⃣ Single-Axis Solar Tracker</h3>
-                        <p>🔹 Optimized energy harvesting with 30% increased efficiency</p>
-                        <p>🔹 Real-time solar positioning for enhanced power output</p>
-                        <p>📌 Developed an intelligent solar tracking system using Arduino and sensors, ensuring optimal panel alignment to maximize energy absorption.</p>
-                    </div>
-                </div>
-                <hr>
-            </div>
-
-            <div class="project-item">
-                <div style="display: flex; align-items: center;">
-                    <img src="humidity_sensor_image.jpg" alt="Temperature and Humidity Sensor" style="width: 200px; height: auto; margin-right: 20px; border-radius: 8px;">
-                    <div>
-                        <h3>2️⃣ Temperature and Humidity Sensor</h3>
-                        <p>🔹 Achieved 95% accuracy in environmental data collection</p>
-                        <p>🔹 Reduced sensor response time by 40%</p>
-                        <p>📌 Designed an IoT-based temperature and humidity sensor for real-time monitoring, ensuring optimal environmental conditions for industrial and agricultural applications.</p>
-                    </div>
-                </div>
-                <hr>
-            </div>
-
-            <div class="project-item">
-                <div style="display: flex; align-items: center;">
-                    <img src="door_lock_image.jpg" alt="Password Door Lock Using Arduino" style="width: 200px; height: auto; margin-right: 20px; border-radius: 8px;">
-                    <div>
-                        <h3>3️⃣ Password Door Lock Using Arduino</h3>
-                        <p>🔹 Enhanced security with encrypted password authentication</p>
-                        <p>🔹 Reduced unauthorized access attempts by 80%</p>
-                        <p>📌 Engineered a smart door lock system using Arduino, implementing a password-protected mechanism to provide secure and convenient access control.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <h2 class="floaty-heading">Contact</h2>
-            <div class="contact-section">
-                <p>Let's connect! Whether you have a project idea, a collaboration opportunity, or just want to chat about embedded systems and content creation, feel free to reach out!</p>
-            </div>
-
-            <div class="contact-section">
-                <h3>Contact Form</h3>
-                <form id="contact-form" action="mailto:medha.tiwari@mitwpu.edu.in" method="post" enctype="text/plain">
-                    <div style="margin-bottom: 10px;">
-                        <label for="name" style="display: block; font-weight: bold;">Name:</label>
-                        <input type="text" id="name" name="name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required>
-                    </div>
-                    <div style="margin-bottom: 10px;">
-                        <label for="email" style="display: block; font-weight: bold;">Email:</label>
-                        <input type="email" id="email" name="email" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required>
-                    </div>
-                    <div style="margin-bottom: 10px;">
-                        <label for="message" style="display: block; font-weight: bold;">Message:</label>
-                        <textarea id="message" name="message" rows="5" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required></textarea>
-                    </div>
-                    <button type="submit" style="padding: 12px 25px; border-radius: 20px; font-size: 1em;">Send Message</button>
-                </form>
-            </div>
-
-            <div class="contact-section">
-                <h3>Schedule a Meeting</h3>
-                <p>Schedule a meeting with me:</p>
-                <a href="https://calendar.app.google/KWAKKZtdRLSa6p7f9" target="_blank">
-                    <img src="calendar.png" alt="Calendar" style="width: 100px; height: auto;">
-                </a>
-            </div>
-
-            <div class="contact-section">
-                <h3>Contact Information</h3>
-                <p>Email: medha.tiwari@mitwpu.edu.in</p>
-                <p>Phone: +91 8755545319</p>
-            </div>
-
-            <div class="contact-section">
-                <h3>Resume Download</h3>
-                <p>Want to know more about my experience?</p>
-                <a href="your_resume.pdf" target="_blank">Download Resume (PDF)</a>
-            </div>
-
-            <div class="contact-section">
-                <h3>Touche Indeed Link</h3>
-                <p>Check out my website:</p>
-                <a href="https://toucheindeed.wixsite.com/touchindeed-1" target="_blank">
-                    <img src="ti.png" alt="Touche Indeed Logo" style="width: 150px; height: auto;">
-                </a>
-            </div>
-
-            <div class="contact-section">
-                <h3>Availability</h3>
-                <p>Available for freelance projects, internships, and collaborations. Open to opportunities in embedded systems, software development, and technical writing.</p>
-            </div>
-
-            <div class="contact-section">
-                <h3>Social Media</h3>
-                <div class="contact-social">
-                    <a href="https://www.linkedin.com/in/medha-tiwari-51559b294/" target="_blank" style="margin-right: 15px;">
-                        <img src="linkedin.png" alt="LinkedIn Logo" style="width: 50px; height: auto;">
-                    </a>
-                    <a href="https://www.instagram.com/medha_tiwari_?igsh=Y3Y2MWx0bzNya3Z1" target="_blank">
-                        <img src="instagram.png" alt="Instagram Logo" style="width: 50px; height: auto;">
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        &copy; 2025 Medha Tiwari
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          document.querySelector('.typing-text').textContent = 'Medha Tiwari';
-        });
-      </script>
-      <script>
-  const coffeeCursor = document.createElement("div");
-  coffeeCursor.textContent = "☕";
-  coffeeCursor.style.position = "fixed";
-  coffeeCursor.style.pointerEvents = "none";
-  coffeeCursor.style.zIndex = "10000";
-  coffeeCursor.style.fontSize = "24px";
-  document.body.appendChild(coffeeCursor);
-
-  document.addEventListener("mousemove", (e) => {
-    coffeeCursor.style.left = e.pageX + "px";
-    coffeeCursor.style.top = e.pageY + "px";
-  });
-</script>
-
+        <div id="programming-dev" class="about-details hidden">
+          <h3>Programming & Development:</h3>
+          <ul>
+            <li>Proficient in <strong>Python, C, C++, Java</strong> with hands-on experience in system programming.</li>
+            <li>Experience in <strong>HTML, CSS, JavaScript</strong> for web development.</li>
+            <li>Building projects in <strong>Android Studio (Java/Kotlin) for app development</strong>.</li>
+          </ul>
+          <button class="read-less-btn" data-target="programming-dev">Read Less</button>
+        </div>
+      </div>
+  
+      <div class="about-segment">
        
+        <div id="embedded-systems" class="about-details hidden">
+          <h3>Embedded Systems & Hardware:</h3>
+          <ul>
+            <li>Experience with <strong>Arduino IDE, STM32</strong>, and <strong>Raspberry Pi</strong> for IoT and automation projects.</li>
+            <li>Working knowledge of <strong>PCB design and circuit simulation</strong>.</li>
+            <li>Skilled in <strong>sensor interfacing and microcontroller programming</strong>.</li>
+          </ul>
+          <button class="read-less-btn" data-target="embedded-systems">Read Less</button>
+        </div>
+      </div>
+  
+      <div class="about-segment">
+      
+        <div id="data-science" class="about-details hidden">
+          <h3>Data Science & Analysis:</h3>
+          <ul>
+            <li>Proficiency in <strong>MATLAB</strong> for signal processing and numerical computation.</li>
+            <li>Experience with <strong>data structures and algorithms</strong> for problem-solving.</li>
+          </ul>
+          <button class="read-less-btn" data-target="data-science">Read Less</button>
+        </div>
+      </div>
+  
+      <div class="about-segment">
+        
+        <div id="digital-content" class="about-details hidden">
+          <h3>Content & Digital Marketing:</h3>
+          <ul>
+            <li>Website development and management, SEO optimization, and content strategy.</li>
+            <li>Skilled in <strong>technical writing, documentation, and video content scripting</strong>.</li>
+          </ul>
+          <button class="read-less-btn" data-target="digital-content">Read Less</button>
+        </div>
+      </div>
+  
+      <div class="about-segment">
+        
+        <div id="tools-platforms" class="about-details hidden">
+          <h3>🛠 Tools & Platforms:</h3>
+          <ul>
+            <li><strong>IDEs:</strong> VS Code, PyCharm, Android Studio, Keil uVision, Arduino IDE</li>
+            <li><strong>Version Control:</strong> Git, GitHub</li>
+            <li><strong>Simulation & Design:</strong> MATLAB, LTspice, Proteus, KiCad, Figma</li>
+          </ul>
+          <button class="read-less-btn" data-target="tools-platforms">Read Less</button>
+        </div>
+      </div>
+  
+      <div class="about-segment">
+  
+        <div id="certifications" class="about-details hidden">
+          <h3>Certifications & Training:</h3>
+          <ul>
+            <li>✅ <strong>MATLAB Onramp & Signal Processing Onramp</strong> *(MathWorks Certified)*</li>
+            <li>✅ <strong>Python 3.4.3 Training</strong> *(Programming Foundation Course)*</li>
+            <li>✅ <strong>COMPTIA Training</strong> *(Cybersecurity & Networking Basics - In Progress)*</li>
+            <li>✅ <strong>STM32 Course</strong> *(Embedded Systems Development - In Progress)*</li>
+          </ul>
+          <button class="read-less-btn" data-target="certifications">Read Less</button>
+        </div>
+      </div>
+  
+      <div class="about-segment">
+
+        <div id="notable-projects" class="about-details hidden">
+          <h3>Notable Projects:</h3>
+          <ul>
+            <li>🌀 <strong>IoT-Based Smart Water Monitoring System</strong> – Developed a real-time water level monitoring system using <strong>ESP8266 and pressure sensors</strong>.</li>
+            <li>📱 <strong>Chatbot Application in Android Studio</strong> – Working on an AI-powered chatbot app with <strong>Java/Kotlin</strong> integration.</li>
+            <li>🌎 <strong>Touche Indeed – Personal Website</strong> – Running a poetry and thought-sharing platform.</li>
+          </ul>
+          <button class="read-less-btn" data-target="notable-projects">Read Less</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <div class="certificates-container">
+    <img src="c1.jpeg" alt="Certificate 1" class="certificate" />
+    <img src="c2.png" alt="Certificate 2" class="certificate" />
+    <img src="c3.png" alt="Certificate 3" class="certificate" />
+    <img src="c4.jpeg" alt="Certificate 4" class="certificate" />
+  </div>
+  </section>
+  
+  <section id="experience" class="section">
+    <h2 class="floaty-heading">Experience</h2>
+    <div style="font-family: 'Merriweather', serif;">
+      
+      <div class="about-segment">
+        <button class="read-more-btn" data-target="team-bolt">Team Bolt (Content Head)</button>
+        <div id="team-bolt" class="about-details hidden">
+          <ul>
+            <li>Led content creation for websites and videos, ensuring clarity and engagement.</li>
+            <li>Developed SEO-optimized content to enhance online reach and visibility.</li>
+            <li>Collaborated with designers and developers to align content with brand identity.</li>
+            <li>Improved storytelling techniques to create compelling digital experiences.</li>
+          </ul>
+          <h4>Skills Developed:</h4>
+          <ul>
+            <li>✅ SEO & content optimization</li>
+            <li>✅ Digital storytelling & branding</li>
+            <li>✅ Cross-functional collaboration</li>
+            <li>✅ Video scriptwriting & editing</li>
+          </ul>
+          <button class="read-less-btn" data-target="team-bolt">Read Less</button>
+        </div>
+      </div>
+  
+      <div class="about-segment">
+        <button class="read-more-btn" data-target="young-minds">Young Minds Org & SWE (Content Head)</button>
+        <div id="young-minds" class="about-details hidden">
+          <ul>
+            <li>Managed and curated content, ensuring quality and alignment with organizational goals.</li>
+            <li>Worked on <strong>user experience optimization</strong> to make content more engaging.</li>
+            <li>Designed content strategies to improve community engagement and outreach.</li>
+          </ul>
+          <h4>Skills Developed:</h4>
+          <ul>
+            <li>✅ Content strategy & management</li>
+            <li>✅ UX-focused content writing</li>
+            <li>✅ Community engagement & leadership</li>
+            <li>✅ Website content structuring</li>
+          </ul>
+          <button class="read-less-btn" data-target="young-minds">Read Less</button>
+        </div>
+      </div>
+  
+      <div class="about-segment">
+        <button class="read-more-btn" data-target="sih-2024">Smart India Hackathon 2024 (Team Vibhava)</button>
+        <div id="sih-2024" class="about-details hidden">
+          <h4>Main Problem Statement:</h4>
+          <p>Developed a dual-purpose <strong>well cap device</strong> featuring:</p>
+          <ol>
+            <li>A tap for controlled water flow</li>
+            <li>A pressure transducer-based sensor to measure water height above ground level</li>
+          </ol>
+          <h4>My Role:</h4>
+          <ul>
+            <li>Worked on embedded system integration and sensor interfacing.</li>
+            <li>Led <strong>hardware development</strong> and sensor calibration.</li>
+            <li>Presented final prototype and solution to industry experts.</li>
+          </ul>
+          <h4>Skills Developed:</h4>
+          <ul>
+            <li>✅ Embedded systems & IoT integration</li>
+            <li>✅ Sensor interfacing & data analysis</li>
+            <li>✅ Real-world problem-solving</li>
+            <li>✅ Technical presentation & prototyping</li>
+          </ul>
+          <button class="read-less-btn" data-target="sih-2024">Read Less</button>
+        </div>
+      </div>
+  
+      <div class="about-segment">
+        <button class="read-more-btn" data-target="hackmitwpu">HackMITWPU’25 (Team Ctrl+Caffeine)</button>
+        <div id="hackmitwpu" class="about-details hidden">
+          <h4>Challenge:</h4>
+          <p><em>Develop a system for companies to better manage and optimize mental health benefits for employees.</em></p>
+          <h4>My Role:</h4>
+          <ul>
+            <li>Led a <strong>cross-disciplinary team</strong> to develop an innovative solution.</li>
+            <li>Designed a <strong>mental health benefits management system</strong>.</li>
+            <li>Focused on <strong>system architecture, workflow design, and UI optimization</strong>.</li>
+          </ul>
+          <h4>Skills Developed:</h4>
+          <ul>
+            <li>✅ Team leadership & project management</li>
+            <li>✅ UI/UX design & workflow structuring</li>
+            <li>✅ Data-driven approach to well-being</li>
+            <li>✅ Rapid prototyping & MVP development</li>
+          </ul>
+          <button class="read-less-btn" data-target="hackmitwpu">Read Less</button>
+        </div>
+      </div>
+     
+    
+    
+  </section>
+  
+<section id="projects" class="section">
+<h2 class="floaty-heading">Projects</h2>
+<div class="project-item">
+<div style="display: flex; align-items: center;">
+<img src="solar_tracker_image.jpg" alt="Single-Axis Solar Tracker" style="width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
+<div>
+<h3>1️⃣ Single-Axis Solar Tracker</h3>
+<p>🔹 Optimized energy harvesting with 30% increased efficiency</p>
+<p>🔹 Real-time solar positioning for enhanced power output</p>
+<p>📌 Developed an intelligent solar tracking system using Arduino and sensors, ensuring optimal panel alignment to maximize energy absorption.</p>
+</div>
+</div>
+<hr>
+</div>
+
+<div class="project-item">
+<div style="display: flex; align-items: center;">
+<img src="humidity_sensor_image.jpg" alt="Temperature and Humidity Sensor" style="width: 200px; height: auto; margin-right: 20px; border-radius: 8px;">
+<div>
+<h3>2️⃣ Temperature and Humidity Sensor</h3>
+<p>🔹 Achieved 95% accuracy in environmental data collection</p>
+<p>🔹 Reduced sensor response time by 40%</p>
+<p>📌 Designed an IoT-based temperature and humidity sensor for real-time monitoring, ensuring optimal environmental conditions for industrial and agricultural applications.</p>
+</div>
+</div>
+<hr>
+</div>
+
+<div class="project-item">
+<div style="display: flex; align-items: center;">
+<img src="door_lock_image.jpg" alt="Password Door Lock Using Arduino" style="width: 200px; height: auto; margin-right: 20px; border-radius: 8px;">
+<div>
+<h3>3️⃣ Password Door Lock Using Arduino</h3>
+<p>🔹 Enhanced security with encrypted password authentication</p>
+<p>🔹 Reduced unauthorized access attempts by 80%</p>
+<p>📌 Engineered a smart door lock system using Arduino, implementing a password-protected mechanism to provide secure and convenient access control.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2 class="floaty-heading">Contact</h2>
+<div class="contact-section">
+<p>Let's connect! Whether you have a project idea, a collaboration opportunity, or just want to chat about embedded systems and content creation, feel free to reach out!</p>
+</div>
+
+<div class="contact-section">
+<h3>Contact Form</h3>
+<form id="contact-form" action="mailto:medha.tiwari@mitwpu.edu.in" method="post" enctype="text/plain">
+<div style="margin-bottom: 10px;">
+<label for="name" style="display: block; font-weight: bold;">Name:</label>
+<input type="text" id="name" name="name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required>
+</div>
+<div style="margin-bottom: 10px;">
+<label for="email" style="display: block; font-weight: bold;">Email:</label>
+<input type="email" id="email" name="email" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required>
+</div>
+<div style="margin-bottom: 10px;">
+<label for="message" style="display: block; font-weight: bold;">Message:</label>
+<textarea id="message" name="message" rows="5" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required></textarea>
+</div>
+<button type="submit" style="padding: 12px 25px; border-radius: 20px; font-size: 1em;">Send Message</button>
+</form>
+</div>
+
+<div class="contact-section">
+<h3>Schedule a Meeting</h3>
+<p>Schedule a meeting with me:</p>
+<a href="https://calendar.app.google/KWAKKZtdRLSa6p7f9" target="_blank">
+<img src="calendar.png" alt="Calendar" style="width: 100px; height: auto;">
+</a>
+</div>
+
+<div class="contact-section">
+<h3>Contact Information</h3>
+<p>Email: medha.tiwari@mitwpu.edu.in</p>
+<p>Phone: +91 8755545319</p>
+</div>
+
+<div class="contact-section">
+<h3>Resume Download</h3>
+<p>Want to know more about my experience?</p>
+<a href="your_resume.pdf" target="_blank">Download Resume (PDF)</a>
+</div>
+
+<div class="contact-section">
+<h3>Touche Indeed Link</h3>
+<p>Check out my website:</p>
+<a href="https://toucheindeed.wixsite.com/touchindeed-1" target="_blank">
+<img src="ti.png" alt="Touche Indeed Logo" style="width: 150px; height: auto;">
+</a>
+</div>
+
+<div class="contact-section">
+<h3>Availability</h3>
+<p>Available for freelance projects, internships, and collaborations. Open to opportunities in embedded systems, software development, and technical writing.</p>
+</div>
+
+<div class="contact-section">
+<h3>Social Media</h3>
+<div class="contact-social">
+<a href="https://www.linkedin.com/in/medha-tiwari-51559b294/" target="_blank" style="margin-right: 15px;">
+<img src="linkedin.png" alt="LinkedIn Logo" style="width: 50px; height: auto;">
+</a>
+<a href="https://www.instagram.com/medha_tiwari_?igsh=Y3Y2MWx0bzNya3Z1" target="_blank">
+<img src="instagram.png" alt="Instagram Logo" style="width: 50px; height: auto;">
+</a>
+</div>
+</div>
+</section>
+</section>
+
+
+
+<footer>
+&copy; 2025 Medha Tiwari
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+document.querySelector('.typing-text').textContent = 'Medha Tiwari';
+});
+</script>
+<script>
+const coffeeCursor = document.createElement("div");
+coffeeCursor.textContent = "💻 ";
+coffeeCursor.style.position = "fixed";
+coffeeCursor.style.pointerEvents = "none";
+coffeeCursor.style.zIndex = "10000";
+coffeeCursor.style.fontSize = "28px";
+document.body.appendChild(coffeeCursor);
+
+document.addEventListener("mousemove", (e) => {
+coffeeCursor.style.left = e.pageX + "px";
+coffeeCursor.style.top = e.pageY + "px";
+});
+</script>
+<script>
+  function showCertificate(imageName) {
+    document.getElementById("certificate-image").src = imageName;
+  }
+  </script>
+  
 </body>
 </html>
